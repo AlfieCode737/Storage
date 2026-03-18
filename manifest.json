@@ -1,7 +1,7 @@
 {
-  "name": "Alfie Cloud Storage",
-  "short_name": "AlfieCloud",
-  "start_url": "/alfie-cloud/", 
+  "name": "Storage",
+  "short_name": "Files",
+  "start_url": "/Storage/", 
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#007bff",
