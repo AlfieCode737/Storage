@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Alfie Cloud</title>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-screen" class="card">
+    <h1>🔒 Private Vault</h1>
+    <p>Secure Storage System</p>
+    <input type="password" id="passInput" placeholder="Enter Password">
+    <button onclick="checkPass()">Unlock Storage</button>
+  </div>
+
+  <!-- Main Storage Screen (Hidden) -->
+  <div id="storage-screen" class="card" style="display:none;">
+    <div class="header-row">
+      <h2>📂 My Files</h2>
+      <button onclick="logout()" class="logout-btn">Lock</button>
+    </div>
+
+    <!-- Storage Meter -->
+    <div class="storage-info">
+      <div class="usage-text">Disk Usage: <span id="usage-val">0</span> / <span id="limit-val">0</span> MB</div>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="upload-area">
+      <input type="file" id="fileInput">
+      <button onclick="uploadFile()" class="upload-btn">Upload to Device</button>
+    </div>
+
+    <div id="status">Secure Session Active</div>
+    
+    <ul id="fileList"></ul>
+
+    <hr>
+    <h3>Activity Log</h3>
+    <div id="logList"></div>
+    <button onclick="clearLogs()" class="clear-btn">Clear History</button>
+  </div>
+
+</body>
+</html>
